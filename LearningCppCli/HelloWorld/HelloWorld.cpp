@@ -2,6 +2,7 @@
 
 #include "stdafx.h"
 #include "UnmanagedSquare.h"
+#include "ManagedSquare.h"
 
 using namespace System;
 
@@ -36,6 +37,13 @@ namespace MyNamespace
 		delete square;	// it will be memory leakage if we don't do this here.
 		//delete &squareRef;	// or we could do this; the result is same
 	}
+
+	void DemoManagedObjects()
+	{
+		ManagedSquare^ square = gcnew ManagedSquare(5.5);	// Managed objects cannot be created on stack. They are always created on the managed heap and are always manipulated by reference. ^ is used to declare a managed reference.
+
+		Console::WriteLine(String::Format(L"Area: {0}", square->CalculateArea()));
+	}
 }
 
 int main(array<System::String ^> ^args)
@@ -49,6 +57,10 @@ int main(array<System::String ^> ^args)
 	std::cout << std::endl;
 
 	MyNamespace::DemoUnmanagedSquareByValue();
+
+	Console::WriteLine();
+
+	MyNamespace::DemoManagedObjects();
 
 	Console::ReadKey(true);
 }

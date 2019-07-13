@@ -27,6 +27,9 @@
     <ClInclude Include="UnmanagedSquare.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ManagedSquare.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc">
@@ -44,6 +47,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="UnamanagedSquare.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ManagedSquare.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
