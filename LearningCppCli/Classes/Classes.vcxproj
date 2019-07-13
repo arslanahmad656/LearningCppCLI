@@ -139,6 +139,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ManagedRefSquareClass.h" />
+    <ClInclude Include="ManagedRefStruct.h" />
+    <ClInclude Include="ManagedValueSquareClass.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="UnmanagedSquareClass.h" />
@@ -150,6 +152,7 @@
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="Driver.cpp" />
     <ClCompile Include="ManagedRefSquareClass.cpp" />
+    <ClCompile Include="ManagedValueSquareClass.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

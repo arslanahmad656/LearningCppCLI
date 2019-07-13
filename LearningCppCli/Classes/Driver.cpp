@@ -3,6 +3,7 @@
 #include "stdafx.h"
 #include "UnmanagedSquareClass.h"
 #include "ManagedRefSquareClass.h"
+#include "ManagedValueSquareClass.h"
 
 using namespace System;
 
@@ -57,6 +58,12 @@ namespace Driver
 			//delete square;	// cannot use delete on this object. Actually there is no need to explicitly call the destructor because it will automatically be called anyways.
 		}	// destructor called. 'using' or 'try/finally' of C# mechanism acheived
 	}
+
+	void DemoValueClass()
+	{
+		ManagedValueSquareClass square(10);
+		square.CalculateArea();
+	}
 }
 
 int main(array<System::String ^> ^args)
@@ -64,7 +71,8 @@ int main(array<System::String ^> ^args)
 	//Driver::DemoUnmanagedClass();
 	//Driver::DemoManagedRefClassNoDisposing();
 	//Driver::DemoManagedRefClassDisposing();
-	Driver::DemoAutomaticDestructorCalling();
+	//Driver::DemoAutomaticDestructorCalling();
+	Driver::DemoValueClass();
 
 	std::cout << "End of progarm...";
 	system("pause");

@@ -30,6 +30,12 @@
     <ClInclude Include="ManagedRefSquareClass.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ManagedValueSquareClass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ManagedRefStruct.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc">
@@ -50,6 +56,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ManagedRefSquareClass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ManagedValueSquareClass.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
