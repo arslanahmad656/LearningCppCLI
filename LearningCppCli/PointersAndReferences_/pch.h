@@ -9,4 +9,8 @@
 
 // add headers that you want to pre-compile here
 
+#include <iostream>
+
+using namespace System;
+
 #endif //PCH_H
