@@ -1,10 +1,10 @@
 #pragma once
-ref class ManagedSquare
+ref class ManagedRefSquare
 {
 private:
 	double side;
 public:
 	double CalculateArea();
-	ManagedSquare(double side);
+	ManagedRefSquare(double side);
 };
 

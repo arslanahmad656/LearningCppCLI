@@ -11,4 +11,6 @@
 
 #include <iostream>
 
+using namespace System;
+
 #endif //PCH_H

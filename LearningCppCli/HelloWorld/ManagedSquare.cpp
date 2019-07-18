@@ -2,12 +2,12 @@
 #include "ManagedSquare.h"
 
 
-double ManagedSquare::CalculateArea()
+double ManagedRefSquare::CalculateArea()
 {
 	return System::Math::Pow(this->side, 2);
 }
 
-ManagedSquare::ManagedSquare(double side)
+ManagedRefSquare::ManagedRefSquare(double side)
 {
 	this->side = side;
 }
