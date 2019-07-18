@@ -26,5 +26,5 @@ void ManagedRefSquare::DoubleSide()
 
 void ManagedRefSquare::DisplayArea()
 {
-	std::cout << "Area of managed square: " << std::pow(this->side, 2) << std::endl;
+	std::cout << "Area of managed ref square: " << std::pow(this->side, 2) << std::endl;
 }

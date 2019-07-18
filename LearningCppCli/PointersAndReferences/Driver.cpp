@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "NativeSquare.h"
 #include "ManagedRefSquare.h"
+#include "ManagedValueSquare.h"
 
 using namespace System;
 
@@ -11,6 +12,9 @@ namespace Driver
 	void NativeByPointer(NativeSquare* sq);
 	void ManagedByValue(ManagedRefSquare sq);
 	void ManagedByRef(ManagedRefSquare^ sq);
+	void ManagedValueByValue(ManagedValueSquare sq);
+	void ManagedValueByReferenceWrong(ManagedValueSquare^ sq);
+	void ManagedValueByReferenceCorrect(ManagedValueSquare% sq);
 
 	void DemoUnmanagedPointers()
 	{
@@ -68,6 +72,41 @@ namespace Driver
 		refSq.DisplayArea();
 	}
 
+	void DemoManagedPointersByValue()
+	{
+		ManagedValueSquare sq(10);	// this object is created on stack
+		Console::WriteLine(String::Format(L"Created managed ref square inside driver function. Square located at: {0}", %sq));
+		Console::WriteLine();
+
+
+		std::cout << "Pass by Value:" << std::endl;
+		std::cout << "Before calling, area: ";
+		sq.DisplayArea();
+		std::cout << std::endl;
+		ManagedValueByValue(sq);	// passing managed object by value. This is possible because this object is instantiated from a value class
+		std::cout << "After calling, area: ";
+		sq.DisplayArea();
+
+		std::cout << std::endl;
+		std::cout << std::endl;
+
+		std::cout << "Pass by reference (wrong way):" << std::endl;
+		std::cout << "Before calling, area: ";
+		sq.DisplayArea();
+		std::cout << std::endl;
+		ManagedValueByReferenceWrong(sq);	// passing by reference. But it will be passed by value
+		std::cout << "After calling, area: ";
+		sq.DisplayArea();
+
+		std::cout << "Pass by reference (correct way):" << std::endl;
+		std::cout << "Before calling, area: ";
+		sq.DisplayArea();
+		std::cout << std::endl;
+		ManagedValueByReferenceCorrect(sq);	// passing by reference. But it will be passed by value
+		std::cout << "After calling, area: ";
+		sq.DisplayArea();
+	}
+
 	void NativeByValue(NativeSquare sq)
 	{
 		std::cout << "Method native by value." << std::endl
@@ -98,7 +137,7 @@ namespace Driver
 		sq->DisplayArea();
 	}
 
-	void ManagedByValue(ManagedRefSquare sq)
+	void ManagedByValue(ManagedRefSquare sq)	// how to use this function? Can it ever be used?? Since ref classes cannot be passed as value
 	{
 		Console::WriteLine(L"Method Managed by value.");
 		Console::WriteLine(String::Format(L"In this function, square is preset at: {0}", % sq));
@@ -119,12 +158,48 @@ namespace Driver
 		std::cout << "Area inside function: ";
 		sq->DisplayArea();
 	}
+
+	void ManagedValueByValue(ManagedValueSquare sq)
+	{
+		Console::WriteLine(L"Method ManagedValueByValue.");
+		Console::WriteLine(String::Format(L"In this function, square is preset at: {0}", %sq));	// % is the counterpart of & but it does not display the address
+		Console::WriteLine(L"Value of side is changed.");
+
+		sq.DoubleSide();
+		std::cout << "Area inside function: ";
+		sq.DisplayArea();
+	}
+
+	void ManagedValueByReferenceWrong(ManagedValueSquare^ sq)
+	{
+		// but this will be passed by value
+		Console::WriteLine(L"Method ManagedValueByReference.");
+		Console::WriteLine(String::Format(L"In this function, square is preset at: {0}", sq));
+		Console::WriteLine(L"Value of side is changed.");
+
+		sq->DoubleSide();
+		std::cout << "Area inside function: ";
+		sq->DisplayArea();
+	}
+
+	void ManagedValueByReferenceCorrect(ManagedValueSquare% sq)
+	{
+		// but this will be passed by value
+		Console::WriteLine(L"Method ManagedValueByReference.");
+		Console::WriteLine(String::Format(L"In this function, square is preset at: {0}", sq));
+		Console::WriteLine(L"Value of side is changed.");
+
+		sq.DoubleSide();
+		std::cout << "Area inside function: ";
+		sq.DisplayArea();
+	}
 }
 
 int main(array<System::String^>^ args)
 {
 	//Driver::DemoUnmanagedPointers();
-	Driver::DemoManagedPointers();
+	//Driver::DemoManagedPointers();
+	Driver::DemoManagedPointersByValue();
 
 	system("pause");
 }
