@@ -1,0 +1,36 @@
+DIFFERENCE BETWEEN POINTERS AND HANDLES
+----------------------------------------------------------------------------------------------------------------------
+
+			POINTERS												HANDLES
+
+ - Pointers store the memory addresses			|	- Handles store the tracking references of the 
+												|	objects in managed heap
+												|
+ - Pointers can point to raw memory addresses	|	- Handles cannot point to raw memory addresses;
+	(e.g. pointer to void)						|	they either refer to an object or nothing
+												|
+ - Pointers are not tracked. This means that	|	- Handles are tracked. They are updated internally
+	if two pointers ptrA and ptrB refer to		|	as the object is moved around managed heap.
+	the same object hObj, and if ptrA deletes	|	
+	the hObj, ptrB still points to the same		|	
+	memory address even if the object has been  |
+	deleted.									|
+												|
+ - Pointers support arithematic operations.		|	- Handles do not support arithematic operations.
+	Pointers support integer arithematics;		|	Handles are made to track the object references
+	they can be incremented, decremented,		|	in managed heap (and not to manipulate raw 
+	and multiplied by integer. The result		|	memory).
+	of an arithematic operation on a pointer	|
+	depends on the type it points to.			|
+												|
+ - Unless changed programatically, pointers		|	- Handles may refer to differnt memory locations 
+	value does not get changed during the		|	during the course of execution of program (since
+	course of execution. (Since pointers		|	handles are made to store and track object in 
+	are made for storing memory addresses).		|	managed heap, and not to store raw memory
+												|	addresses).
+												|
+ - Pointers are not type-safe. A pointer		|	- Handles are type safe which means that a handle
+	initially pointing to an integer can		|	for typeA object cannot track the objects of
+	be made to point to a double value			|	typeB.
+	through type casting. Pointers can			|
+	even made to point to anything (void*)		|

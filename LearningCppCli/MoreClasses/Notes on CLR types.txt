@@ -1,0 +1,32 @@
+DECLARING CLR TYPES
+-------------------
+
+Categories of types:
+	- Reference Types
+		- ref class
+		- ref struct
+	- Value Types
+		- value class
+		- value struct
+	- Interface Types
+		- interface class
+		- interface struct
+
+==================================================================================================================================================================================
+
+General
+-------
+ - struct types have, by default, public members
+ - class types have, by default, private members
+ - value types are equivalent to C# struct types
+ - ref types are equivalent to C# class types
+ - interface class and interface struct types are equivalent
+
+Inheritance
+-----------
+ - types can be abstract or sealed or both
+ - abstract sealed can have only static methods (equivalent to static class in C#)
+ - a type cannot inherit from multiple parents
+ - a type can implement multiple interfaces
+ - values types cannot inherit from any class (they implicitly inherit from System::ValueType)
+ - value types are sealed by default

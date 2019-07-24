@@ -52,4 +52,8 @@
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="Notes on CLR types.txt" />
+    <Text Include="Notes on Pointers and Handles.txt" />
+  </ItemGroup>
 </Project>
