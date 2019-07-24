@@ -32,6 +32,9 @@
     <ClInclude Include="NativeStruct.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ManagedRefClass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MoreClasses.cpp">

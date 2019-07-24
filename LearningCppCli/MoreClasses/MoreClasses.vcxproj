@@ -139,6 +139,7 @@
     <ResourceCompile Include="app.rc" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ManagedRefClass.h" />
     <ClInclude Include="NativeClass.h" />
     <ClInclude Include="NativeStruct.h" />
     <ClInclude Include="pch.h" />
