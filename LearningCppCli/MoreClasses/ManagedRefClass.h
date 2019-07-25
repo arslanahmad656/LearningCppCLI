@@ -2,7 +2,7 @@
 
 #include "NativeClass.h"
 
-ref class ManagedRefClass
+ref class ManagedValueStruct
 {
 private:
 	//NativeClass nativeobj;	// cannot create native objects in a managed class
