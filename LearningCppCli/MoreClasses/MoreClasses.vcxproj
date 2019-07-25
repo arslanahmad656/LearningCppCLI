@@ -166,6 +166,7 @@
   <ItemGroup>
     <Text Include="Notes on CLR types.txt" />
     <Text Include="Notes on Pointers and Handles.txt" />
+    <Text Include="Notes.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

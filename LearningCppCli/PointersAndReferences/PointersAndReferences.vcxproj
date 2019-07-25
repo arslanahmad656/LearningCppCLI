@@ -157,6 +157,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Driver.cpp" />
+    <ClCompile Include="PointersAndReferences.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="app.ico" />
