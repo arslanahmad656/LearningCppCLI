@@ -200,6 +200,4 @@ int main(array<System::String^>^ args)
 	//Driver::DemoUnmanagedPointers();
 	//Driver::DemoManagedPointers();
 	Driver::DemoManagedPointersByValue();
-
-	system("pause");
 }
