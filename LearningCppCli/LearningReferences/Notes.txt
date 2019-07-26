@@ -6,6 +6,11 @@
 	- When a value is boxed from stack, it is copied to the heap and the handle refers to the object on the heap. So the value is available even when the stack is destroyed.
 	- When a pointer is created to a value on the stack and that pointer is returned by the function, this value will be destroyed on return.
 
+	- Pointer to a ref class (or an interface class) is not allowed. Pointer to a value class is allowed.
+	- Handle to a managed class is not allowed.
+
+	- Native classes cannot contain handles or ref types. Native classes can contain value types.
+
 	- When a managed ref value is created as if it were created on stack and its reference is returned from this function, the value will be copied to heap. The destructor will still be called.
 	In the following example, SquareStruct is ref struct
 	void Demo1(SquareStruct% test)

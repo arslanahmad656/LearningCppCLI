@@ -135,6 +135,23 @@ namespace StrangeDestructor
 	}
 }
 
+namespace Vagabond
+{
+	ref class RefClass {};
+	value class ValueClass {};
+	class NativeClass {};
+
+	void Test()
+	{
+		NativeClass* nPtr;
+		//RefClass* mPtr;	 // not allowed
+		ValueClass* vmPtr;
+
+		ValueClass^ vmHnd;
+		//NativeClass^ nHnd;	// not allowed
+	}
+}
+
 int main(array<System::String ^> ^args)
 {
 	//NativeClass* nPtr = Boxing::BoxingMoveTestNative();
