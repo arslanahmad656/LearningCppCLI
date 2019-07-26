@@ -2,13 +2,13 @@
 
 using namespace System;
 
-value struct ValueStructStudent
+ref class RefClassStudent
 {
 private:
 	String^ name;
 	int rollNumber;
 public:
-	ValueStructStudent(String^ name, int rollNumber) 
+	RefClassStudent(String^ name, int rollNumber)
 		: name(name), rollNumber(rollNumber)
 	{
 		// empty body

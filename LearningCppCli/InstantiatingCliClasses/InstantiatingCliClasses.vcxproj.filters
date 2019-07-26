@@ -29,6 +29,9 @@
     <ClInclude Include="ValueStructStudent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="RefClassStudent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="InstantiatingCliClasses.cpp">

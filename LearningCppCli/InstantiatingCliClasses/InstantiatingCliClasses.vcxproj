@@ -140,6 +140,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
+    <ClInclude Include="RefClassStudent.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="ValueStructStudent.h" />
   </ItemGroup>
