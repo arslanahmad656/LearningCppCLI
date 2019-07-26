@@ -29,6 +29,18 @@ public:
 		Copy(% copy);
 	}
 
+	RefClassStudent% operator=(RefClassStudent% copy)
+	{
+		if (this == %copy)	// checking for referential equality
+		{
+			return *this;
+		}
+
+		this->name = copy.name;
+		this->rollNumber = copy.rollNumber;
+		return *this;
+	}
+
 	String^ GetStudentInfo()
 	{
 		return String::Format("{0} - {1}", this->name, this->rollNumber);
