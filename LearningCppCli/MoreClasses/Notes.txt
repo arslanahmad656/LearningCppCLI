@@ -1,0 +1,4 @@
+Native vs Managed
+
+ - Native objects are not automatically boxed.
+ - Managed objects are automatically boxed

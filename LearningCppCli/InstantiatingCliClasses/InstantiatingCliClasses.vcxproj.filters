@@ -26,13 +26,10 @@
     <ClInclude Include="pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="NativeSquare.h">
+    <ClInclude Include="ValueStructStudent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ManagedRefSquare.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ManagedValueSquare.h">
+    <ClInclude Include="RefClassStudent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -43,19 +40,7 @@
     <ClCompile Include="pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="NativeSquare.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ManagedRefSquare.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Driver.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ManagedValueSquare.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="PointersAndReferences.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

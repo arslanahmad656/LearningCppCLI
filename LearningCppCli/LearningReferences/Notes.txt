@@ -1,0 +1,42 @@
+ Native types vs Managed Types
+ ------------------------------
+	- Native values are not automatically boxed.
+	- CLS types are automatically boxed when required.
+
+	- When a value is boxed from stack, it is copied to the heap and the handle refers to the object on the heap. So the value is available even when the stack is destroyed.
+	- When a pointer is created to a value on the stack and that pointer is returned by the function, this value will be destroyed on return.
+
+	- Pointer to a ref class (or an interface class) is not allowed. Pointer to a value class is allowed.
+	- Handle to a managed class is not allowed.
+
+	- Native classes cannot contain handles or ref types. Native classes can contain value types.
+
+	- When a managed ref value is created as if it were created on stack and its reference is returned from this function, the value will be copied to heap. The destructor will still be called.
+	In the following example, SquareStruct is ref struct
+	void Demo1(SquareStruct% test)
+	{
+		// destructor of test will not be called
+	}
+
+	SquareStruct^ Demo2()
+	{
+		SquareStruct square(10);
+		Demo1(square);
+		Console::WriteLine(square.side);
+		return %square;	// square is not de-allocated (it is already on heap); however its destructor has been called
+	}
+
+Value type vs Referecnce types
+------------------------------
+	- Value type: Value types can be boxed and unboxed.
+	- Reference type: Reference types cannot be boxed and unboxed
+
+	- Value type: When a value type is created on heap, it is a boxed value that is stored in the handle. It can be unboxed to be stored as value on stack
+	- Reference type: Reference type cannot be created on stack. When it is created on heap, it is not a boxed value. It is actually the object whose reference is stored in the handle.
+
+	- Value type: No copy constructor or overloaded assignment operator is required to copy or assign a value type.
+	-Reference type: By default, if no copy constructor or overloaded assignment operator is available, a dererenced reference type cannot be copied or assigned to another value. However, the handles can simply be assigned.
+
+
+ Heap
+ ------------------------
