@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29102.190
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HelloWorld", "HelloWorld\HelloWorld.vcxproj", "{53ED5A4B-6008-4A95-AF25-DF9710CEC5EC}"
 EndProject
@@ -18,6 +18,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LearningReferences", "LearningReferences\LearningReferences.vcxproj", "{2F274700-6145-4966-B6AD-B14A849A5B4F}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "InstantiatingCliClasses", "InstantiatingCliClasses\InstantiatingCliClasses.vcxproj", "{DAD762DE-90E7-4569-BBAB-FE36623D4418}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Boxing", "Boxing\Boxing.vcxproj", "{DFE66B22-0DF2-40F6-8287-414E6EF3E06D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -91,6 +93,14 @@ Global
 		{DAD762DE-90E7-4569-BBAB-FE36623D4418}.Release|x64.Build.0 = Release|x64
 		{DAD762DE-90E7-4569-BBAB-FE36623D4418}.Release|x86.ActiveCfg = Release|Win32
 		{DAD762DE-90E7-4569-BBAB-FE36623D4418}.Release|x86.Build.0 = Release|Win32
+		{DFE66B22-0DF2-40F6-8287-414E6EF3E06D}.Debug|x64.ActiveCfg = Debug|x64
+		{DFE66B22-0DF2-40F6-8287-414E6EF3E06D}.Debug|x64.Build.0 = Debug|x64
+		{DFE66B22-0DF2-40F6-8287-414E6EF3E06D}.Debug|x86.ActiveCfg = Debug|Win32
+		{DFE66B22-0DF2-40F6-8287-414E6EF3E06D}.Debug|x86.Build.0 = Debug|Win32
+		{DFE66B22-0DF2-40F6-8287-414E6EF3E06D}.Release|x64.ActiveCfg = Release|x64
+		{DFE66B22-0DF2-40F6-8287-414E6EF3E06D}.Release|x64.Build.0 = Release|x64
+		{DFE66B22-0DF2-40F6-8287-414E6EF3E06D}.Release|x86.ActiveCfg = Release|Win32
+		{DFE66B22-0DF2-40F6-8287-414E6EF3E06D}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
