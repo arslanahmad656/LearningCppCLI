@@ -2,7 +2,7 @@
 ref class BaseCourse
 {
 public:
-	value struct CourseData
+	ref struct CourseData
 	{
 		int courseCode;
 		CourseData(int code)
@@ -12,30 +12,29 @@ public:
 	};
 
 private:
-	CourseData courseData;
+	CourseData^ courseData;
 
 public:
-	BaseCourse() : BaseCourse(CourseData())
+	BaseCourse(int code) : courseData(gcnew CourseData(code))
 	{
-		// delegated to another ctor
 	}
 
-	BaseCourse(CourseData data) : courseData(data)
+	virtual property CourseData^ Data	// virutal property which means that the accessors are virtual
 	{
-		// empty
-	}
-
-	virtual property CourseData Data	// virutal property which means that the accessors are virtual
-	{
-		CourseData get()
+		CourseData^ get()
 		{
 			return courseData;
 		}
 
-		void set(CourseData value)
+		void set(CourseData^ value)
 		{
-			courseData.courseCode = value.courseCode;
+			courseData->courseCode = value->courseCode;
 		}
+	}
+
+	virtual void Print()
+	{
+		Console::WriteLine("Course code: {0}", this->Data->courseCode);
 	}
 };
 
