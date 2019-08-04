@@ -21,6 +21,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "InstantiatingCliClasses", "
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Boxing", "Boxing\Boxing.vcxproj", "{DFE66B22-0DF2-40F6-8287-414E6EF3E06D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Chapter2", "Chapter2\Chapter2.vcxproj", "{CA30ABFA-54EE-4CD7-B0E6-BF6449B5EC63}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -101,6 +103,14 @@ Global
 		{DFE66B22-0DF2-40F6-8287-414E6EF3E06D}.Release|x64.Build.0 = Release|x64
 		{DFE66B22-0DF2-40F6-8287-414E6EF3E06D}.Release|x86.ActiveCfg = Release|Win32
 		{DFE66B22-0DF2-40F6-8287-414E6EF3E06D}.Release|x86.Build.0 = Release|Win32
+		{CA30ABFA-54EE-4CD7-B0E6-BF6449B5EC63}.Debug|x64.ActiveCfg = Debug|x64
+		{CA30ABFA-54EE-4CD7-B0E6-BF6449B5EC63}.Debug|x64.Build.0 = Debug|x64
+		{CA30ABFA-54EE-4CD7-B0E6-BF6449B5EC63}.Debug|x86.ActiveCfg = Debug|Win32
+		{CA30ABFA-54EE-4CD7-B0E6-BF6449B5EC63}.Debug|x86.Build.0 = Debug|Win32
+		{CA30ABFA-54EE-4CD7-B0E6-BF6449B5EC63}.Release|x64.ActiveCfg = Release|x64
+		{CA30ABFA-54EE-4CD7-B0E6-BF6449B5EC63}.Release|x64.Build.0 = Release|x64
+		{CA30ABFA-54EE-4CD7-B0E6-BF6449B5EC63}.Release|x86.ActiveCfg = Release|Win32
+		{CA30ABFA-54EE-4CD7-B0E6-BF6449B5EC63}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
