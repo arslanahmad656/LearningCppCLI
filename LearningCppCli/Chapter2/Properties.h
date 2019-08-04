@@ -1,5 +1,7 @@
 #include "stdafx.h"
 #include "Student.h"
+#include "BaseCourse.h"
+#include "PhysicsCourse.h"
 
 #ifndef __PROPERTIES__
 #define __PROPERTIES__
@@ -36,6 +38,31 @@ namespace Properties
 		age = student->Age;
 
 		Console::WriteLine("Student age: {0}", age);
+	}
+
+	void DemoInheritedProperties()
+	{
+		BaseCourse^ baseCourse = gcnew BaseCourse(101);
+
+		BaseCourse^ physics = gcnew PhysicsCourse("Mechanics", 102);
+
+		Console::WriteLine("Base course:");
+		baseCourse->Print();
+		Console::WriteLine();
+
+		Console::WriteLine("Physics course:");
+		physics->Print();
+		Console::WriteLine();
+
+		Console::WriteLine("Changing course code and title");
+		physics->Data->courseCode = baseCourse->Data->courseCode;
+		PhysicsCourse::PhysicsCourseData^ physicsData = safe_cast<PhysicsCourse::PhysicsCourseData^>(physics->Data);
+		physicsData->title = "Electricity and Magnetism";
+
+		Console::WriteLine();
+		Console::WriteLine("Physics course:");
+		physics->Print();
+		Console::WriteLine();
 	}
 }
 

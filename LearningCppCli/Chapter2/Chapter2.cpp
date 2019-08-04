@@ -7,7 +7,8 @@ using namespace System;
 
 int main(array<System::String ^> ^args)
 {
-	Properties::DemoSimpleProperties();
+	//Properties::DemoSimpleProperties();
+	Properties::DemoInheritedProperties();
 
     Console::WriteLine(L"End of program...");
 	Console::ReadKey(false);
