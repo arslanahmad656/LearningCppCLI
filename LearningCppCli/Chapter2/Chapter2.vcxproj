@@ -140,6 +140,7 @@
   <ItemGroup>
     <ClInclude Include="resource.h" />
     <ClInclude Include="stdafx.h" />
+    <ClInclude Include="Student.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc" />
