@@ -8,7 +8,8 @@ using namespace System;
 int main(array<System::String ^> ^args)
 {
 	//Properties::DemoSimpleProperties();
-	Properties::DemoInheritedProperties();
+	//Properties::DemoInheritedProperties();
+	Properties::DemoStaticProperties();
 
     Console::WriteLine(L"End of program...");
 	Console::ReadKey(false);

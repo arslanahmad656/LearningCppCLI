@@ -64,6 +64,16 @@ namespace Properties
 		physics->Print();
 		Console::WriteLine();
 	}
+
+	void DemoStaticProperties()
+	{
+		Student^ s1 = gcnew Student();
+		Student^s2 = gcnew Student();
+
+		Console::WriteLine("School Name: {0}", Student::SchoolName);
+		Console::WriteLine("School Name: {0}", s1->SchoolName);
+		Console::WriteLine("School Name: {0}", s2->SchoolName);
+	}
 }
 
 #endif // !__PROPERTIES__

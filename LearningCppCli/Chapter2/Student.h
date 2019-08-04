@@ -6,7 +6,15 @@ ref class Student
 {
 private: 
 	int age;
+	static String^ school;
+
 public:
+
+	static Student()
+	{
+		school = "Satellite Public School Shakargarh";
+	}
+
 	Student()
 	{
 	}
@@ -35,6 +43,15 @@ public:
 			}
 
 			this->age = value;
+		}
+	}
+
+	// define a readonly property	
+	static property String^ SchoolName
+	{
+		String^ get()
+		{
+			return school;
 		}
 	}
 };
