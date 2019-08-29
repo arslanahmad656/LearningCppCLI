@@ -5,6 +5,7 @@
 #include "Delegates/Delegates.h"
 #include "Events/Intro.h"
 #include "Events/Example.h"
+#include "Arrays/Baiscs.h"
 
 using namespace System;
 
@@ -23,7 +24,19 @@ int main(array<System::String ^> ^args)
 
 	// EVENTS
 	//DemoSimpleEvents::Demo();
-	EventExample::Demo();
+	//EventExample::Demo();
+
+	//ARRAYS
+	//SingleDimensionArrays::Demo();
+	//MultiDimensionalArrays::Demo();
+	//JaggedArrays::Demo();
+	//ArraysAsFunctionArgs::Demo();
+	//ArrayAsReturnTypes::Demo();
+	//ParameterArrays::Demo();
+	//MistakeInForeach::Demo();
+	//ArrayCovariance::Demo();
+	//ManagedArrayOfNative::Demo();
+	AccessingManagedArraysUsingNativePointers::Demo();
 
     Console::WriteLine(L"End of program...");
 	Console::ReadKey(false);

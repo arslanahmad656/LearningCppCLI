@@ -42,6 +42,12 @@
     <ClInclude Include="Events\Intro.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Events\Example.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Arrays\Baiscs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc">

@@ -138,6 +138,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Arrays\Baiscs.h" />
     <ClInclude Include="BaseCourse.h" />
     <ClInclude Include="Delegates\Delegates.h" />
     <ClInclude Include="Events\Example.h" />
