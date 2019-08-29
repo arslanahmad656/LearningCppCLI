@@ -36,6 +36,12 @@
     <ClInclude Include="PhysicsCourse.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Delegates\Delegates.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Events\Intro.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc">
