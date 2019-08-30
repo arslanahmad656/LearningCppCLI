@@ -77,3 +77,53 @@ namespace UsingStackSemantics
 		// no delete required because when objects are created on heap using stack semantics, the destructor is automatically called once the objects go out of scope.
 	}
 }
+
+namespace StackSemanticsForMemberObjects
+{
+	ref class InnerClass
+	{
+	public:
+		InnerClass()
+		{
+			Console::WriteLine(__FUNCSIG__);
+		}
+		~InnerClass()
+		{
+			Console::WriteLine(__FUNCSIG__);
+		}
+	protected:
+		!InnerClass()
+		{
+			Console::WriteLine(__FUNCSIG__);
+		}
+	};
+
+	ref class OuterClass
+	{
+	private:
+		// How to dispose the managed object that is contained within a class?
+		// If stack semantics is not used, it has to be destroyed explicitly.
+		// Since stack semantics is being used to create the inner object, it will be destroyed automatically when the containing object is deleted.
+		InnerClass inner;
+	public:
+		OuterClass()
+		{
+			Console::WriteLine(__FUNCSIG__);
+		}
+		~OuterClass()
+		{
+			Console::WriteLine(__FUNCSIG__);
+		}
+	protected:
+		!OuterClass()
+		{
+			Console::WriteLine(__FUNCSIG__);
+		}
+	};
+
+	void Demo()
+	{
+		OuterClass outer;
+		// the outer and the inner contained withing the outer will automatically be destroyed when the function exits.
+	}
+}

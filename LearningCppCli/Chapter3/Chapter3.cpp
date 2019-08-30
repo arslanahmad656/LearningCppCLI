@@ -11,7 +11,8 @@ int main(array<System::String ^> ^args)
 
 	// USING STACK SEMANTICS
 	//WithoutUsingStackSemantics::Demo();
-	UsingStackSemantics::Demo();
+	//UsingStackSemantics::Demo();
+	StackSemanticsForMemberObjects::Demo();
 
     return 0;
 }
