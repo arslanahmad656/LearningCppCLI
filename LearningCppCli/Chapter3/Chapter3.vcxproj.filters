@@ -26,6 +26,15 @@
     <ClInclude Include="pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Intro\Basics.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StackSemantics\Intro.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Intro\Example.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Chapter3.cpp">
@@ -42,5 +51,10 @@
     <Image Include="app.ico">
       <Filter>Resource Files</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="File1.txt" />
+    <Text Include="File3.txt" />
+    <Text Include="File2.txt" />
   </ItemGroup>
 </Project>
