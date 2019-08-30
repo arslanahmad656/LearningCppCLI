@@ -140,6 +140,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FunctionOverriding\Overriding.h" />
+    <ClInclude Include="Generics\Basics.h" />
     <ClInclude Include="Intro\Basics.h" />
     <ClInclude Include="Intro\Example.h" />
     <ClInclude Include="pch.h" />

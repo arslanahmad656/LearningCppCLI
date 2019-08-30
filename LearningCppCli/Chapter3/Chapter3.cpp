@@ -2,6 +2,7 @@
 #include "Intro/Example.h"
 #include "StackSemantics/Intro.h"
 #include "FunctionOverriding/Overriding.h"
+#include"Generics/Basics.h"
 
 using namespace System;
 
@@ -18,7 +19,10 @@ int main(array<System::String ^> ^args)
 	// FUNCTION OVERRIDING
 	//NewVsOverride::Demo();
 	//RenamedOverriding::Demo();
-	MultipleOverriding::Demo();
+	//MultipleOverriding::Demo();
+
+	// GENERICS
+	GenericsIntro::Demo();
 
     return 0;
 }
