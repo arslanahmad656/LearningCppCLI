@@ -35,6 +35,9 @@
     <ClInclude Include="Intro\Example.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="FunctionOverriding\Overriding.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Chapter3.cpp">

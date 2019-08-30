@@ -104,6 +104,7 @@ namespace StackSemanticsForMemberObjects
 		// How to dispose the managed object that is contained within a class?
 		// If stack semantics is not used, it has to be destroyed explicitly.
 		// Since stack semantics is being used to create the inner object, it will be destroyed automatically when the containing object is deleted.
+		// Had this been declared using a handle variable, we would have to make sure that the object is destroyed (perhaps in the destructor of the containing class) before the destruction of the containing object.
 		InnerClass inner;
 	public:
 		OuterClass()
